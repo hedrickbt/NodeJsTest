@@ -77,3 +77,74 @@ myGlobalObject.item++;
 
 console.log('TestVariable = ' + util.inspect(TestVariable, {showHidden: false, depth: null}));
 console.log('myGlobalObject = ' + util.inspect(myGlobalObject, {showHidden: false, depth: null}));
+
+
+
+var MyCounter = 10;
+
+console.log( 'For Loop' );
+for ( var Index = 0; Index < MyCounter; Index++ ) {
+  console.log( 2 * Index + ' Index=' + Index );
+}
+
+console.log( 'Do..While Loop' );
+var Index = 0;
+do {
+  Index++;
+  console.log( 2 * Index + ' Index2=' + Index );
+} while (Index < MyCounter);
+
+console.log( 'While..Do Loop' );
+var Index = 0;
+while (Index < MyCounter) {
+  Index++;
+  console.log( 2 * Index + ' Index2=' + Index );
+} 
+
+console.log( 'If..else..' );
+var IsTrue = '10';
+if (IsTrue === 10) {  // Triple equals says the datatype and value have to be the same.  Double only checks the value
+  console.log('yep type and value');
+} else if (IsTrue == 10) {
+  console.log('yep only value');
+} else {
+  console.log('nope');
+}
+
+console.log( 'For Loop : Only Evens' );
+for ( var Index = 0; Index < MyCounter; Index++ ) {
+  if (Index % 2 == 0) {
+    console.log( 2 * Index + ' Even Index=' + Index );
+  }
+}
+
+console.log( 'For Loop : Break after 4');
+for ( var Index = 0; Index < MyCounter; Index++ ) {
+  console.log( 2 * Index + ' Even Index=' + Index );
+  if (Index == 4) {
+    break;
+  }
+}
+
+console.log( 'For Loop : continue : Skip 4');
+for ( var Index = 0; Index < MyCounter; Index++ ) {
+  if (Index == 4) {
+    continue;
+  }
+  console.log( 2 * Index + ' Even Index=' + Index );
+}
+
+
+console.log( 'Switch');
+for (var i=0; i<=10; i++) {
+  switch (i) {
+    case 1:
+      console.log(i + ' Is the lonliest number');
+      break;
+    case 10:
+      console.log('Perfect ' + i);
+      break;
+    default:
+      console.log('Where\'s ' + i);
+  }
+}
